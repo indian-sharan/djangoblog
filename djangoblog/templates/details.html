@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block title %} {{ post.title }} | SHARAN KUMAR BLOG {% endblock %}
+
+
+{% block content %}
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-8">
+            <!-- Post content-->
+            <article>
+                <!-- Post header-->
+                <header class="mb-4">
+                    <!-- Post title-->
+                    <h1 class="fw-bolder mb-1" style="color:#0d6efd;">{{ post.title }}</h1>
+                    <!-- Post meta content-->
+                    <div class="text-muted fst-italic mb-2"><span class="badge bg-danger px-2 py-1 shadow-1-strong mb-3">Published on {{ post.create_date }}</span></div>
+                    <!-- Post categories
+                    <a class="badge bg-secondary text-decoration-none link-light" href="#!">Web Design</a>
+                    <a class="badge bg-secondary text-decoration-none link-light" href="#!">Freebies</a> -->
+                </header>
+                <!-- Preview image figure-->
+                <figure class="mb-4"><img class="img-fluid rounded" src="{{ post.image.url }}" alt="..." /></figure>
+                <!-- Post content-->
+                <section class="mb-5">
+                    <p class="fs-5 mb-4" style="text-align: justify;">
+                        {{ post.body|safe }}
+                    </p>
+                </section>
+            </article>
+            <a href="{% url 'home' %}" class="btn btn-primary">Back</a>
+        </div>
+    </div>
+</div>
+<div class="col-lg-4">
+    
+
+{% endblock %}
+

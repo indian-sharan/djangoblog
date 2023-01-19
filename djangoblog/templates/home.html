@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<h1>Latest Posts</h1>
+    {% for post in object_list %}
+    <div class="mb-4 mb-lg-0">
+            <section class="border-bottom pb-4 mb-5">
+                <div class="row gx-5">
+                  <div class="col-md-6 mb-4">
+                    <div class="bg-image hover-overlay ripple shadow-2-strong rounded-5" data-mdb-ripple-color="light">
+                      <a href=" {% url 'articleview' post.slug %}"><img src="{{ post.image.url }}" class="img-fluid" alt="Post Image"/></a>
+                      <a href="#">
+                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                      </a>
+                    </div>
+                  </div>
+          
+                  <div class="col-md-6 mb-4">
+                    <h4><strong><a href="{% url 'articleview' post.slug %}" style="text-decoration: none;">{{ post.title }}</a></strong></h4>
+                    <span class="badge bg-danger px-2 py-1 shadow-1-strong mb-3">Published on {{ post.create_date }}</span>
+                    <p class="text-muted" style="text-align: justify;">
+                        {{ post.featured_content }}
+                    </p>
+                    <a href="{% url 'articleview' post.slug %}" class="btn btn-primary">Read More</a>
+                  </div>
+                </div>
+              </section>
+    </div>
+        
+    {% endfor %} 
+
+{% endblock %}
+    
+    
