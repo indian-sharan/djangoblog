@@ -2,7 +2,7 @@
     "version":2,
     "builds":[
         {
-            "src": "sharanblog/sharanblog/wsgi.py",
+            "src": "sharanblog/wsgi.py",
             "use": "@vercel/python",
             "config": { "maxLambdaSize": "15mb", "runtime": "python3.11.1" }
         },
@@ -19,7 +19,7 @@
         },
         {
             "src": "/(.*)",
-            "dest": "sharanblog/sharanblog/wsgi.py"
+            "dest": "sharanblog/wsgi.py"
         }
     ]
 }
