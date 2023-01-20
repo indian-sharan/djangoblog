@@ -14,7 +14,7 @@ SECRET_KEY = 'django-insecure-be6f=55%2yo5=of6lcwshmchaw-_@gh4j$65&!s5^*^3=oei0#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['.vercel.app', '.now.sh']
 
 
 # Application definition
@@ -68,10 +68,10 @@ WSGI_APPLICATION = 'sharanblog.wsgi.application'
 DATABASES = {
 'default': {
 'ENGINE': 'django.db.backends.mysql',
-'NAME': 'djangoapp',
-'USER': 'root',
-'PASSWORD': '',
-'HOST':'localhost',
+'NAME': 'djangosharan',
+'USER': 'sharani',
+'PASSWORD': 'Sharan1071@',
+'HOST':'68.178.145.146',
 'PORT':'3306',
 }
 }
