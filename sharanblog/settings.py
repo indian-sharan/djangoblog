@@ -67,12 +67,8 @@ WSGI_APPLICATION = 'sharanblog.wsgi.application'
 
 DATABASES = {
 'default': {
-'ENGINE': 'django.db.backends.mysql',
-'NAME': 'djangosharan',
-'USER': 'sharani',
-'PASSWORD': 'Sharan1071@',
-'HOST':'68.178.145.146',
-'PORT':'3306',
+'ENGINE': 'django.db.backends.sqlite3',
+'NAME': BASE_DIR / 'db.sqlite3',
 }
 }
 
